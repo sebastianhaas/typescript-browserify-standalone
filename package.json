@@ -1,0 +1,31 @@
+{
+  "name": "typescript-browserify-standalone",
+  "version": "0.1.0",
+  "description": "A testbed for a standalone library bundled with browserify from a TypeScript codebase.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build-tsc": "tsc && browserify dist/index.js --standalone MyFancyLibrary -o dist/bundledLibrary.js",
+    "build-tsify": "mkdir dist-tsify && browserify index.ts --standalone MyFancyLibrary -o dist-tsify/bundledLibrary.js -p [ tsify ]",
+    "build-grunt": "grunt",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastianhaas/typescript-browserify-standalone.git"
+  },
+  "author": "Sebastian Haas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sebastianhaas/typescript-browserify-standalone/issues"
+  },
+  "homepage": "https://github.com/sebastianhaas/typescript-browserify-standalone#readme",
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "tsify": "^1.0.3",
+    "typescript": "^1.8.10"
+  }
+}
